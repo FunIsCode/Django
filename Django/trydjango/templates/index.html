@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ results.title }}</title>
+</head>
+<body>
+
+<h1> This is the data </h1>
+<!--% url 'detail' id=result.id %-->
+{% for result in results %}
+<a href="{% result.get_absolute_url %}"> {{ result.content }} </a> </br>
+{{ result.timestamp }}</br>
+{{ result.updated }}</br>
+{{ result.id }} </br>
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block head_title%} {{result.title }} | {{block.super}} {%endblock head_title%}
+
+{%block content%}
+<div class="col-sm-6 col-sm-offset-3">
+    <h1> {{ result.title }}
+        <small> {{result.timestamp}}</small>
+    </h1>
+    <small> {{result.id}}</small>
+    </br>
+    {{ result.content }}  </br>
+    <p><a href="{% url 'posts:update' id=result.id %}" class="btn btn-primary" role="button"> Update</a></p>
+    <!--<p><a href="{% url 'posts:list' %}" class="btn btn-primary" role="button"> Home Page</a></p>-->
+</div>
+
+
+{% endblock content %}
